@@ -1,4 +1,9 @@
-### Environment Setup
+### Chapter 2
 
-> conda env create -f pytorch_course_env.yml
-> conda activate pytorchenv <=> conda deactivate
+#### Adaline 
+- Batch Gradient Descent: Based on whole dataset
+- Stochastic Gradient Descent: Based on increasion
+  - Aviod Periodic Condition
+
+#### Feature Scale
+- Standardization: Helps Gradient Descent Converges Faster
