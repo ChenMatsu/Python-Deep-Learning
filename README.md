@@ -1,26 +1,32 @@
-### PyTorch Basics
+### Machine Learning Introduction
 
-#### Tensor Basics
-- torch.from_numpy() / torch.as_tensor() => Address Reference
-- torch.tensor() => Value Reference
-  - tensor() => Int Type
-  - Tensor() => Float Type
-  - empty() => Create Tensor 
-  - zero() => Zero Tensor
-  - ones() => One's Tensor
-  - arange(start, end, step) 
-  - linspace(start, end, elements)
-  - type() => Convert dtype
-  - rand(row, col)
-  - randn(row, col)
-  - randint(low, high, size)
-  - rand_like() => Generate certain shape tensor
-  - manual_seed() => Generate random seed
-  - view() => View in certain shape => -1 turn to infer
-  - add()
-    - _: Reassign
-  - mul()
-  - mm() / a @  b=> Matrix Multiplication
-  - norm()
-  - numel()
-    
+- Supervised (Label) => Output is known
+  - Classification
+  - Regression
+- Unsupervised (No Label)
+  - Clustering
+    - Group Data
+  - Anomaly Detection
+  - Dimensionality Deduction
+
+---
+#### Overfitting / Underfitting
+- Overfitting
+  - Fits too much noise 
+- Underfitting
+  - Does not capture trend (Low Variance & High Bias)
+
+---
+#### Performace Evaluation (Classification)
+- Recall
+  - Ability of Model to find relevant cases within datasets 
+  - TP / TP + FP
+- F1-Score
+  - 2 * (precision * recall) / (precision + recall)
+
+---
+#### Performace Evaluation (Regression)
+- MAE
+- MSE
+- RMSE
+
