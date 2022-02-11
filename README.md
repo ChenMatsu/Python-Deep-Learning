@@ -57,5 +57,59 @@ Ex: y = (x1w1 + b) + (x2w2 + b)
 **Softmax Function**
 
 - Calculate probabilities distribution over K different events
-- Sum of all probabilites is 1 
-> $$ \sigma(z)_i = \frac{e^{z*i}}{\sum_{i=1}^Ke^{z_i} } $$
+- Sum of all probabilites is 1
+  > $$ \sigma(z)_i = \frac{e^{z*i}}{\sum_{i=1}^Ke^{z_i} } $$
+
+#### Cost Function and Gradient Descent
+
+    1. Cost Function (a.k.a Loss Function) must be an average so it can output a single value
+
+**Quadratic Cost Function**
+
+> $$ C = \frac{1}{2n}\sum\_{x}||y(x) - a^L(x)|| $$
+
+    1. Calculate Difference between Real Value y(x) against Predicted Value a(x)
+    2. Punish Large Errors
+
+> $$ C(W, B, S^r, E^r) $$
+
+    1. W => Neural Network's Weights
+       - Minimize overall loss => Figure out which w results in the minimum of C(w)
+    2. B => Neural Network's Biases
+       - W and B are encoded inside a(x)
+    3. S => Input of a Single Training Sample
+    4. E => Desired Output of the Input Training Sample
+
+---
+
+    1. Derivative is not enough for Neural Network => Gradient Descent(Derivative)
+       - Step Size => Learning Rate 
+    2. Adaptive Gradient Descent => Start from Large Step, then Smaller Step
+       - Adam 
+
+> $$ \triangledown C(w_1, w_2, ..., w_n) $$
+
+**Classification Problem**
+    1. Cross Entropy Loss Function => Predict Probability Distribution for Classes
+
+**Binary Cross Entropy**
+> $$ -(ylog(p) + (1 - y)log(1-p)) $$ 
+
+**N-Cross Entropy**
+> $$ -\sum_{c=1}^My_{(o, c)}log(p_{o, c}) $$
+
+#### BackPropagation
+    1. Use gradient to go back through network
+```
+L-n <=> L-(n-1) <=> ... <=> L-2 <=> L-1 <=> L
+```
+
+> $$ Z^L = W^La^{L-1} + b^L $$
+> $$ a^L = \sigma(z^L) $$
+> $$ c_0(...) = (a^L - y)^2 
+
+> $$ \begin{bmatrix} 1 \\ 2   \end{bmatrix}  \odot \begin{bmatrix} 3 \\ 4   \end{bmatrix} = \begin{bmatrix} 3 \\ 8   \end{bmatrix}  $$
+
+> $$ \delta^L = \triangledown_aC\odot\sigma^{'}(z^L)$$
+> $$ \triangledown_aC = (a^L-y) $$
+> $$ \delta^l = (w^{l+1})^T\delta^{l+1} \odot\sigma^{'}(z^l)$$
