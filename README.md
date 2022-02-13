@@ -113,3 +113,5 @@ L-n <=> L-(n-1) <=> ... <=> L-2 <=> L-1 <=> L
 > $$ \delta^L = \triangledown_aC\odot\sigma^{'}(z^L)$$
 > $$ \triangledown_aC = (a^L-y) $$
 > $$ \delta^l = (w^{l+1})^T\delta^{l+1} \odot\sigma^{'}(z^l)$$
+
+#### 
