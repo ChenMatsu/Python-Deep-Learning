@@ -1,21 +1,10 @@
-### CNN (Convolutional Neural Network)
-
-#### Filters
-Filters are essentially an **Image Kernel**, which is applied to an image, are refered to as **Convolutional Kernels**
-The process of passing Filters to Images are called **Convolution**
-
-#### Convolutional Layer
-- ANN Issues
-  - Large Amount of Params
-  - Lost 2D Information by Flatten Data
-  - Only Work with Small and Centered Data
+### RNN (Recurrent Neural Network)
+> More effective for sequence data
 ---
-- CNN 
-  - Reduce Params by Local Connectivity 
+#### RNN Theory
+> Sends output back to itself
+#### Vanishing Gradient
 
-#### Pooling Layer (Downsampling Layer)
-- Max Pooling
-- Avg Pooling
-- Min Pooling
----
-- Dropout Layer
+#### LSTM (Long-Short-Term-Memory Unit) ＆ GRU (Gated-Recurrent-Unit)
+
+#### Batch Theory
