@@ -1,7 +1,2 @@
-# GPU & CUDA
+# NLP
 
-## GPU
-- More Logical Cores
-
-## CUDA
-> Developed By Nvidia
